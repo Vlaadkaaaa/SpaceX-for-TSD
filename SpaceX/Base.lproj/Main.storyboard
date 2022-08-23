@@ -1,24 +1,646 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5oT-jU-HK5">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="LabGrotesque-Bold.ttf">
+            <string>LabGrotesque-Bold</string>
+        </array>
+        <array key="LabGrotesque-Regular.ttf">
+            <string>LabGrotesque-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <scene sceneID="zEp-vp-8KL">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="5oT-jU-HK5" customClass="ViewController" customModule="SpaceX" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ecB-pm-ha0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ro-Ae-cFQ">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="824"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="w1x-xY-4sE">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="277"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="kxX-Sb-CPC">
+                                        <rect key="frame" x="0.0" y="234" width="414" height="768"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleAspectFit" distribution="equalSpacing" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="oKH-o5-PuS">
+                                                <rect key="frame" x="32" y="0.0" width="350" height="75"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Falcon Heavy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PXH-KX-pYL">
+                                                        <rect key="frame" x="0.0" y="48" width="140" height="27"/>
+                                                        <fontDescription key="fontDescription" name="LabGrotesque-Bold" family="Lab Grotesque" pointSize="23"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xne-XB-Ude">
+                                                        <rect key="frame" x="305" y="39" width="45" height="36"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="36" id="6Xg-Y2-5ug"/>
+                                                        </constraints>
+                                                        <color key="tintColor" red="0.94901961089999998" green="0.94901961089999998" blue="0.94901961089999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" image="power" catalog="system"/>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="PXH-KX-pYL" firstAttribute="top" secondItem="oKH-o5-PuS" secondAttribute="top" constant="48" id="aAh-bJ-pOb"/>
+                                                </constraints>
+                                            </stackView>
+                                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bKE-e7-AqP">
+                                                <rect key="frame" x="0.0" y="115" width="414" height="96"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gXk-RO-9FA">
+                                                        <rect key="frame" x="0.0" y="0.0" width="485" height="96"/>
+                                                        <subviews>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WWz-6S-V4k">
+                                                                <rect key="frame" x="32" y="0.0" width="96" height="96"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2XY-Iy-7fC">
+                                                                        <rect key="frame" x="8" y="28" width="80" height="19"/>
+                                                                        <fontDescription key="fontDescription" name="LabGrotesque-Bold" family="Lab Grotesque" pointSize="16"/>
+                                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Высота, m" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VYn-DN-20G">
+                                                                        <rect key="frame" x="8" y="55.5" width="80" height="16.5"/>
+                                                                        <fontDescription key="fontDescription" name="LabGrotesque-Regular" family="Lab Grotesque" pointSize="14"/>
+                                                                        <color key="textColor" red="0.5568627451" green="0.5568627451" blue="0.56078431370000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <constraints>
+                                                                    <constraint firstItem="2XY-Iy-7fC" firstAttribute="leading" secondItem="WWz-6S-V4k" secondAttribute="leading" constant="8" id="46T-Ci-eAv"/>
+                                                                    <constraint firstAttribute="height" constant="96" id="9OS-wp-Fj5"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="VYn-DN-20G" secondAttribute="trailing" constant="8" id="Lov-oc-j6T"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="2XY-Iy-7fC" secondAttribute="trailing" constant="8" id="QOs-8y-8Yc"/>
+                                                                    <constraint firstItem="2XY-Iy-7fC" firstAttribute="top" secondItem="WWz-6S-V4k" secondAttribute="top" constant="28" id="frP-oA-doi"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="VYn-DN-20G" secondAttribute="bottom" constant="24" id="g4f-WX-k3i"/>
+                                                                    <constraint firstAttribute="width" constant="96" id="gdq-Cs-6LK"/>
+                                                                    <constraint firstItem="VYn-DN-20G" firstAttribute="leading" secondItem="WWz-6S-V4k" secondAttribute="leading" constant="8" id="mzO-jY-HMh"/>
+                                                                </constraints>
+                                                            </view>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H5j-Pf-gLW">
+                                                                <rect key="frame" x="140" y="0.0" width="96" height="96"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Om4-Aa-Pne">
+                                                                        <rect key="frame" x="8" y="28" width="80" height="19"/>
+                                                                        <fontDescription key="fontDescription" name="LabGrotesque-Bold" family="Lab Grotesque" pointSize="16"/>
+                                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Диаметр, m" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vvW-AN-kUv">
+                                                                        <rect key="frame" x="8" y="55.5" width="80" height="16.5"/>
+                                                                        <fontDescription key="fontDescription" name="LabGrotesque-Regular" family="Lab Grotesque" pointSize="14"/>
+                                                                        <color key="textColor" red="0.5568627451" green="0.5568627451" blue="0.56078431370000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="96" id="42F-y5-wze"/>
+                                                                    <constraint firstItem="Om4-Aa-Pne" firstAttribute="leading" secondItem="H5j-Pf-gLW" secondAttribute="leading" constant="8" id="5n3-A5-Tur"/>
+                                                                    <constraint firstItem="Om4-Aa-Pne" firstAttribute="top" secondItem="H5j-Pf-gLW" secondAttribute="top" constant="28" id="Ji6-uf-49o"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="vvW-AN-kUv" secondAttribute="trailing" constant="8" id="fxd-bS-jJb"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="Om4-Aa-Pne" secondAttribute="trailing" constant="8" id="jLx-Fh-tj6"/>
+                                                                    <constraint firstAttribute="height" constant="96" id="jXn-3U-rAi"/>
+                                                                    <constraint firstItem="vvW-AN-kUv" firstAttribute="leading" secondItem="H5j-Pf-gLW" secondAttribute="leading" constant="8" id="mpY-lz-Tyt"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="vvW-AN-kUv" secondAttribute="bottom" constant="24" id="rDg-eE-N0q"/>
+                                                                </constraints>
+                                                            </view>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fh3-fV-nFQ">
+                                                                <rect key="frame" x="248" y="0.0" width="96" height="96"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iAQ-eR-ktw">
+                                                                        <rect key="frame" x="8" y="28" width="80" height="19"/>
+                                                                        <fontDescription key="fontDescription" name="LabGrotesque-Bold" family="Lab Grotesque" pointSize="16"/>
+                                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Масса, kg" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LcU-cd-QGO">
+                                                                        <rect key="frame" x="8" y="55.5" width="80" height="16.5"/>
+                                                                        <fontDescription key="fontDescription" name="LabGrotesque-Regular" family="Lab Grotesque" pointSize="14"/>
+                                                                        <color key="textColor" red="0.5568627451" green="0.5568627451" blue="0.56078431370000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <constraints>
+                                                                    <constraint firstItem="iAQ-eR-ktw" firstAttribute="leading" secondItem="fh3-fV-nFQ" secondAttribute="leading" constant="8" id="BPd-C8-703"/>
+                                                                    <constraint firstItem="iAQ-eR-ktw" firstAttribute="top" secondItem="fh3-fV-nFQ" secondAttribute="top" constant="28" id="LLy-Bt-7id"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="LcU-cd-QGO" secondAttribute="bottom" constant="24" id="hMI-5L-KaD"/>
+                                                                    <constraint firstAttribute="height" constant="96" id="iWf-tA-GjX"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="iAQ-eR-ktw" secondAttribute="trailing" constant="8" id="okM-ua-nRL"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="LcU-cd-QGO" secondAttribute="trailing" constant="8" id="r8o-AO-leI"/>
+                                                                    <constraint firstAttribute="width" constant="96" id="t83-cV-akP"/>
+                                                                    <constraint firstItem="LcU-cd-QGO" firstAttribute="leading" secondItem="fh3-fV-nFQ" secondAttribute="leading" constant="8" id="y5E-4m-qHj"/>
+                                                                </constraints>
+                                                            </view>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Slg-kG-4si">
+                                                                <rect key="frame" x="356" y="0.0" width="96" height="96"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j3a-j2-sVa">
+                                                                        <rect key="frame" x="8" y="28" width="80" height="19"/>
+                                                                        <fontDescription key="fontDescription" name="LabGrotesque-Bold" family="Lab Grotesque" pointSize="16"/>
+                                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Нагрузка, кг" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hr8-Yz-JY6">
+                                                                        <rect key="frame" x="8" y="55.5" width="80" height="16.5"/>
+                                                                        <fontDescription key="fontDescription" name="LabGrotesque-Regular" family="Lab Grotesque" pointSize="14"/>
+                                                                        <color key="textColor" red="0.5568627451" green="0.5568627451" blue="0.56078431370000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="96" id="01b-Xu-3Er"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="j3a-j2-sVa" secondAttribute="trailing" constant="8" id="8B2-4V-nOz"/>
+                                                                    <constraint firstItem="Hr8-Yz-JY6" firstAttribute="leading" secondItem="Slg-kG-4si" secondAttribute="leading" constant="8" id="dYw-Nx-ycs"/>
+                                                                    <constraint firstItem="j3a-j2-sVa" firstAttribute="top" secondItem="Slg-kG-4si" secondAttribute="top" constant="28" id="kL7-tJ-XV6"/>
+                                                                    <constraint firstAttribute="width" constant="96" id="lZg-bu-YjT"/>
+                                                                    <constraint firstItem="j3a-j2-sVa" firstAttribute="leading" secondItem="Slg-kG-4si" secondAttribute="leading" constant="8" id="sb2-Lh-1wC"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="Hr8-Yz-JY6" secondAttribute="trailing" constant="8" id="vk5-VR-a4t"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="Hr8-Yz-JY6" secondAttribute="bottom" constant="24" id="wzH-kg-4l0"/>
+                                                                </constraints>
+                                                            </view>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="bottom" secondItem="Slg-kG-4si" secondAttribute="bottom" id="5fh-qq-Prn"/>
+                                                            <constraint firstAttribute="bottom" secondItem="fh3-fV-nFQ" secondAttribute="bottom" id="6ac-P3-Xng"/>
+                                                            <constraint firstItem="Slg-kG-4si" firstAttribute="leading" secondItem="fh3-fV-nFQ" secondAttribute="trailing" constant="12" id="AuV-mC-TR8"/>
+                                                            <constraint firstItem="H5j-Pf-gLW" firstAttribute="top" secondItem="gXk-RO-9FA" secondAttribute="top" id="C3S-2G-fSL"/>
+                                                            <constraint firstItem="WWz-6S-V4k" firstAttribute="top" secondItem="gXk-RO-9FA" secondAttribute="top" id="FAh-T4-vmO"/>
+                                                            <constraint firstItem="fh3-fV-nFQ" firstAttribute="top" secondItem="gXk-RO-9FA" secondAttribute="top" id="Lqb-Fl-nwd"/>
+                                                            <constraint firstAttribute="width" constant="485" id="OrT-Pg-Z7e"/>
+                                                            <constraint firstItem="H5j-Pf-gLW" firstAttribute="leading" secondItem="WWz-6S-V4k" secondAttribute="trailing" constant="12" id="UMR-qF-hyY"/>
+                                                            <constraint firstAttribute="bottom" secondItem="H5j-Pf-gLW" secondAttribute="bottom" id="WqG-Pq-VAv"/>
+                                                            <constraint firstItem="fh3-fV-nFQ" firstAttribute="leading" secondItem="H5j-Pf-gLW" secondAttribute="trailing" constant="12" id="Xrl-gE-5yz"/>
+                                                            <constraint firstItem="Slg-kG-4si" firstAttribute="top" secondItem="gXk-RO-9FA" secondAttribute="top" id="oka-Hf-Yjb"/>
+                                                            <constraint firstAttribute="bottom" secondItem="WWz-6S-V4k" secondAttribute="bottom" id="x3s-v9-719"/>
+                                                            <constraint firstItem="WWz-6S-V4k" firstAttribute="leading" secondItem="gXk-RO-9FA" secondAttribute="leading" constant="32" id="zwa-jj-uou"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="96" id="JP5-6M-Hr7"/>
+                                                    <constraint firstAttribute="bottom" secondItem="gXk-RO-9FA" secondAttribute="bottom" id="SiR-zu-ABm"/>
+                                                    <constraint firstItem="gXk-RO-9FA" firstAttribute="top" secondItem="bKE-e7-AqP" secondAttribute="top" id="Tul-RG-AkV"/>
+                                                    <constraint firstItem="gXk-RO-9FA" firstAttribute="centerY" secondItem="bKE-e7-AqP" secondAttribute="centerY" id="eiP-2a-QtB"/>
+                                                    <constraint firstAttribute="trailing" secondItem="gXk-RO-9FA" secondAttribute="trailing" id="lm1-uh-6Dp"/>
+                                                    <constraint firstItem="gXk-RO-9FA" firstAttribute="leading" secondItem="bKE-e7-AqP" secondAttribute="leading" id="sO6-Cd-1AF"/>
+                                                </constraints>
+                                            </scrollView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="MCp-ag-eLx">
+                                                <rect key="frame" x="32" y="251" width="350" height="89"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="2GL-Ix-rfU">
+                                                        <rect key="frame" x="0.0" y="0.0" width="350" height="19"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Первый запуск" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hTw-xd-rO1">
+                                                                <rect key="frame" x="0.0" y="0.0" width="113.5" height="19"/>
+                                                                <fontDescription key="fontDescription" name="LabGrotesque-Regular" family="Lab Grotesque" pointSize="16"/>
+                                                                <color key="textColor" red="0.79215686269999996" green="0.79215686269999996" blue="0.79215686269999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7 февраля, 2018" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LAf-4e-UJc">
+                                                                <rect key="frame" x="226" y="0.0" width="124" height="19"/>
+                                                                <fontDescription key="fontDescription" name="LabGrotesque-Bold" family="Lab Grotesque" pointSize="16"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="Ffn-un-fK6">
+                                                        <rect key="frame" x="0.0" y="35" width="350" height="19"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Страна" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SIL-sx-MaP">
+                                                                <rect key="frame" x="0.0" y="0.0" width="55" height="19"/>
+                                                                <fontDescription key="fontDescription" name="LabGrotesque-Regular" family="Lab Grotesque" pointSize="16"/>
+                                                                <color key="textColor" red="0.79215686269999996" green="0.79215686269999996" blue="0.79215686269999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="США" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WAu-Tg-2Jy">
+                                                                <rect key="frame" x="311.5" y="0.0" width="38.5" height="19"/>
+                                                                <fontDescription key="fontDescription" name="LabGrotesque-Bold" family="Lab Grotesque" pointSize="16"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="BKN-sm-DST">
+                                                        <rect key="frame" x="0.0" y="70" width="350" height="19"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Стоимость запуска" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2eE-Jb-iRS">
+                                                                <rect key="frame" x="0.0" y="0.0" width="145.5" height="19"/>
+                                                                <fontDescription key="fontDescription" name="LabGrotesque-Regular" family="Lab Grotesque" pointSize="16"/>
+                                                                <color key="textColor" red="0.79215686269999996" green="0.79215686269999996" blue="0.79215686269999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$90 млн" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cgJ-Ua-7EK">
+                                                                <rect key="frame" x="289.5" y="0.0" width="60.5" height="19"/>
+                                                                <fontDescription key="fontDescription" name="LabGrotesque-Bold" family="Lab Grotesque" pointSize="16"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="qKV-a7-vxn">
+                                                <rect key="frame" x="32" y="380" width="350" height="126"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="PYN-aB-xC2">
+                                                        <rect key="frame" x="0.0" y="0.0" width="350" height="21"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ПЕРВАЯ СТУПЕНЬ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rLR-pf-M08">
+                                                                <rect key="frame" x="0.0" y="0.0" width="350" height="21"/>
+                                                                <fontDescription key="fontDescription" name="LabGrotesque-Bold" family="Lab Grotesque" pointSize="16"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="u6x-tb-Oqm">
+                                                        <rect key="frame" x="0.0" y="37" width="350" height="19"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Количество двигателей" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JwR-Kp-dHr">
+                                                                <rect key="frame" x="0.0" y="0.0" width="178.5" height="19"/>
+                                                                <fontDescription key="fontDescription" name="LabGrotesque-Regular" family="Lab Grotesque" pointSize="16"/>
+                                                                <color key="textColor" red="0.79215686269999996" green="0.79215686269999996" blue="0.79215686269999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="bq0-LY-w4v">
+                                                                <rect key="frame" x="294.5" y="0.0" width="55.5" height="19"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="27" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3MZ-V0-2bn">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="24" height="19"/>
+                                                                        <fontDescription key="fontDescription" name="LabGrotesque-Bold" family="Lab Grotesque" pointSize="16"/>
+                                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="thg" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="glO-OW-1LJ">
+                                                                        <rect key="frame" x="32" y="0.0" width="23.5" height="19"/>
+                                                                        <fontDescription key="fontDescription" name="LabGrotesque-Regular" family="Lab Grotesque" pointSize="16"/>
+                                                                        <color key="textColor" red="0.5568627451" green="0.5568627451" blue="0.56078431370000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                                <constraints>
+                                                                    <constraint firstItem="glO-OW-1LJ" firstAttribute="leading" secondItem="3MZ-V0-2bn" secondAttribute="trailing" constant="8" symbolic="YES" id="0aQ-GT-Kem"/>
+                                                                </constraints>
+                                                            </stackView>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="0Lt-Q4-812">
+                                                        <rect key="frame" x="0.0" y="72" width="350" height="19"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Количество топлива" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uWN-ao-g5g">
+                                                                <rect key="frame" x="0.0" y="0.0" width="154" height="19"/>
+                                                                <fontDescription key="fontDescription" name="LabGrotesque-Regular" family="Lab Grotesque" pointSize="16"/>
+                                                                <color key="textColor" red="0.79215686269999996" green="0.79215686269999996" blue="0.79215686269999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="v6F-4F-7jk">
+                                                                <rect key="frame" x="264" y="0.0" width="86" height="19"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="308,6" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i4C-42-8bZ">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="54.5" height="19"/>
+                                                                        <fontDescription key="fontDescription" name="LabGrotesque-Bold" family="Lab Grotesque" pointSize="16"/>
+                                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ton" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fxS-ex-jmi">
+                                                                        <rect key="frame" x="62.5" y="0.0" width="23.5" height="19"/>
+                                                                        <fontDescription key="fontDescription" name="LabGrotesque-Regular" family="Lab Grotesque" pointSize="16"/>
+                                                                        <color key="textColor" red="0.5568627451" green="0.5568627451" blue="0.56078431370000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                                <constraints>
+                                                                    <constraint firstItem="fxS-ex-jmi" firstAttribute="leading" secondItem="i4C-42-8bZ" secondAttribute="trailing" constant="8" symbolic="YES" id="nnP-Oh-6FR"/>
+                                                                </constraints>
+                                                            </stackView>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="jRL-zN-7T4">
+                                                        <rect key="frame" x="0.0" y="107" width="350" height="19"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Время сгорания" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W40-ge-myS">
+                                                                <rect key="frame" x="0.0" y="0.0" width="122.5" height="19"/>
+                                                                <fontDescription key="fontDescription" name="LabGrotesque-Regular" family="Lab Grotesque" pointSize="16"/>
+                                                                <color key="textColor" red="0.79215686269999996" green="0.79215686269999996" blue="0.79215686269999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="bv2-Uj-s5d">
+                                                                <rect key="frame" x="281" y="0.0" width="69" height="19"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="593" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DvP-BE-M4I">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="35.5" height="19"/>
+                                                                        <fontDescription key="fontDescription" name="LabGrotesque-Bold" family="Lab Grotesque" pointSize="16"/>
+                                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sec" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nxL-Zo-9C7">
+                                                                        <rect key="frame" x="43.5" y="0.0" width="25.5" height="19"/>
+                                                                        <fontDescription key="fontDescription" name="LabGrotesque-Regular" family="Lab Grotesque" pointSize="16"/>
+                                                                        <color key="textColor" red="0.5568627451" green="0.5568627451" blue="0.56078431370000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                                <constraints>
+                                                                    <constraint firstItem="nxL-Zo-9C7" firstAttribute="leading" secondItem="DvP-BE-M4I" secondAttribute="trailing" constant="8" symbolic="YES" id="6Hj-mM-ze3"/>
+                                                                </constraints>
+                                                            </stackView>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="126" id="GFX-xI-dtf"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="eGY-H2-c4R">
+                                                <rect key="frame" x="32" y="546" width="350" height="126"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="aOQ-qO-KJH">
+                                                        <rect key="frame" x="0.0" y="0.0" width="350" height="21"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ВТОРАЯ СТУПЕНЬ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cch-K8-pMO">
+                                                                <rect key="frame" x="0.0" y="0.0" width="350" height="21"/>
+                                                                <fontDescription key="fontDescription" name="LabGrotesque-Bold" family="Lab Grotesque" pointSize="16"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="lZE-09-gur">
+                                                        <rect key="frame" x="0.0" y="37" width="350" height="19"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Количество двигателей" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tRV-zk-Slr">
+                                                                <rect key="frame" x="0.0" y="0.0" width="178.5" height="19"/>
+                                                                <fontDescription key="fontDescription" name="LabGrotesque-Regular" family="Lab Grotesque" pointSize="16"/>
+                                                                <color key="textColor" red="0.79215686269999996" green="0.79215686269999996" blue="0.79215686269999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="sF2-eZ-SBz">
+                                                                <rect key="frame" x="306.5" y="0.0" width="43.5" height="19"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="64t-Rb-Y4P">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="12" height="19"/>
+                                                                        <fontDescription key="fontDescription" name="LabGrotesque-Bold" family="Lab Grotesque" pointSize="16"/>
+                                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="thg" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZBj-N0-a3M">
+                                                                        <rect key="frame" x="20" y="0.0" width="23.5" height="19"/>
+                                                                        <fontDescription key="fontDescription" name="LabGrotesque-Regular" family="Lab Grotesque" pointSize="16"/>
+                                                                        <color key="textColor" red="0.5568627451" green="0.5568627451" blue="0.56078431370000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                                <constraints>
+                                                                    <constraint firstItem="ZBj-N0-a3M" firstAttribute="leading" secondItem="64t-Rb-Y4P" secondAttribute="trailing" constant="8" symbolic="YES" id="AaI-uE-uyT"/>
+                                                                </constraints>
+                                                            </stackView>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="CQT-C9-8VZ">
+                                                        <rect key="frame" x="0.0" y="72" width="350" height="19"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Количество топлива" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AdA-VC-JL4">
+                                                                <rect key="frame" x="0.0" y="0.0" width="154" height="19"/>
+                                                                <fontDescription key="fontDescription" name="LabGrotesque-Regular" family="Lab Grotesque" pointSize="16"/>
+                                                                <color key="textColor" red="0.79215686269999996" green="0.79215686269999996" blue="0.79215686269999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Kxb-Uw-vTV">
+                                                                <rect key="frame" x="264" y="0.0" width="86" height="19"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="243,2" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xZe-Fq-xin">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="54.5" height="19"/>
+                                                                        <fontDescription key="fontDescription" name="LabGrotesque-Bold" family="Lab Grotesque" pointSize="16"/>
+                                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ton" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c2P-38-Srk">
+                                                                        <rect key="frame" x="62.5" y="0.0" width="23.5" height="19"/>
+                                                                        <fontDescription key="fontDescription" name="LabGrotesque-Regular" family="Lab Grotesque" pointSize="16"/>
+                                                                        <color key="textColor" red="0.5568627451" green="0.5568627451" blue="0.56078431370000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                                <constraints>
+                                                                    <constraint firstItem="c2P-38-Srk" firstAttribute="leading" secondItem="xZe-Fq-xin" secondAttribute="trailing" constant="8" symbolic="YES" id="Bfb-aJ-Ucy"/>
+                                                                </constraints>
+                                                            </stackView>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="yAD-uC-kWg">
+                                                        <rect key="frame" x="0.0" y="107" width="350" height="19"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Время сгорания" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S1s-u4-Vcv">
+                                                                <rect key="frame" x="0.0" y="0.0" width="122.5" height="19"/>
+                                                                <fontDescription key="fontDescription" name="LabGrotesque-Regular" family="Lab Grotesque" pointSize="16"/>
+                                                                <color key="textColor" red="0.79215686269999996" green="0.79215686269999996" blue="0.79215686269999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="aOq-Ji-gkY">
+                                                                <rect key="frame" x="281" y="0.0" width="69" height="19"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="397" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5b4-Vl-LYP">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="35.5" height="19"/>
+                                                                        <fontDescription key="fontDescription" name="LabGrotesque-Bold" family="Lab Grotesque" pointSize="16"/>
+                                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sec" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wqd-vh-tlX">
+                                                                        <rect key="frame" x="43.5" y="0.0" width="25.5" height="19"/>
+                                                                        <fontDescription key="fontDescription" name="LabGrotesque-Regular" family="Lab Grotesque" pointSize="16"/>
+                                                                        <color key="textColor" red="0.5568627451" green="0.5568627451" blue="0.56078431370000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                                <constraints>
+                                                                    <constraint firstItem="Wqd-vh-tlX" firstAttribute="leading" secondItem="5b4-Vl-LYP" secondAttribute="trailing" constant="8" symbolic="YES" id="0NQ-Ks-YY4"/>
+                                                                </constraints>
+                                                            </stackView>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="126" id="44P-DB-KtV"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="xEp-GZ-rT5">
+                                                <rect key="frame" x="32" y="712" width="350" height="56"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Fc-Vb-vKk">
+                                                        <rect key="frame" x="0.0" y="0.0" width="350" height="56"/>
+                                                        <color key="backgroundColor" red="0.12941176469999999" green="0.12941176469999999" blue="0.12941176469999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="56" id="uJq-Sp-Buo"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="LabGrotesque-Bold" family="Lab Grotesque" pointSize="18"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="Посмотреть запуски">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="presentLaunches:" destination="5oT-jU-HK5" eventType="touchUpInside" id="imS-bW-L20"/>
+                                                            <segue destination="aDO-Bp-YdH" kind="presentation" identifier="" modalPresentationStyle="fullScreen" id="ygs-RL-AIb"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="xEp-GZ-rT5" secondAttribute="trailing" constant="32" id="AEW-SQ-uK9"/>
+                                            <constraint firstItem="MCp-ag-eLx" firstAttribute="top" secondItem="bKE-e7-AqP" secondAttribute="bottom" constant="40" id="H6K-SF-NOU"/>
+                                            <constraint firstItem="bKE-e7-AqP" firstAttribute="leading" secondItem="kxX-Sb-CPC" secondAttribute="leadingMargin" id="Miv-v9-0PQ"/>
+                                            <constraint firstItem="MCp-ag-eLx" firstAttribute="leading" secondItem="kxX-Sb-CPC" secondAttribute="leading" constant="32" id="OHU-DR-Awb"/>
+                                            <constraint firstItem="bKE-e7-AqP" firstAttribute="top" secondItem="oKH-o5-PuS" secondAttribute="bottom" constant="40" id="Qtt-1w-aGE"/>
+                                            <constraint firstItem="eGY-H2-c4R" firstAttribute="leading" secondItem="kxX-Sb-CPC" secondAttribute="leading" constant="32" id="YP2-gY-bYS"/>
+                                            <constraint firstItem="qKV-a7-vxn" firstAttribute="leading" secondItem="kxX-Sb-CPC" secondAttribute="leading" constant="32" id="qKY-Rg-atQ"/>
+                                            <constraint firstItem="xEp-GZ-rT5" firstAttribute="leading" secondItem="kxX-Sb-CPC" secondAttribute="leading" constant="32" id="sbo-1J-iOj"/>
+                                            <constraint firstItem="oKH-o5-PuS" firstAttribute="leading" secondItem="kxX-Sb-CPC" secondAttribute="leading" constant="32" id="vdz-dq-DdB"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="kxX-Sb-CPC" secondAttribute="trailing" id="9zR-cT-C9X"/>
+                                    <constraint firstItem="kxX-Sb-CPC" firstAttribute="leading" secondItem="4ro-Ae-cFQ" secondAttribute="leading" id="HZM-jV-I8D"/>
+                                    <constraint firstAttribute="bottom" secondItem="kxX-Sb-CPC" secondAttribute="bottom" constant="20" id="akn-Jf-WFq"/>
+                                    <constraint firstItem="kxX-Sb-CPC" firstAttribute="top" secondItem="4ro-Ae-cFQ" secondAttribute="top" constant="234" id="fMg-gY-8k0"/>
+                                    <constraint firstItem="kxX-Sb-CPC" firstAttribute="centerX" secondItem="4ro-Ae-cFQ" secondAttribute="centerX" id="hl0-a4-9kh"/>
+                                </constraints>
+                            </scrollView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" numberOfPages="4" translatesAutoresizingMaskIntoConstraints="NO" id="hJb-L2-rSw">
+                                <rect key="frame" x="0.0" y="824" width="414" height="72"/>
+                                <color key="backgroundColor" red="0.070588235289999995" green="0.070588235289999995" blue="0.070588235289999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="72" id="DB6-tS-j5P"/>
+                                </constraints>
+                                <color key="pageIndicatorTintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </pageControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1nx-PF-xhv">
+                                <rect key="frame" x="336.5" y="843" width="57.5" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="cMo-c0-Eob"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Next">
+                                    <fontDescription key="titleFontDescription" name="LabGrotesque-Bold" family="Lab Grotesque" pointSize="16"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="nextButton:" destination="5oT-jU-HK5" eventType="touchUpInside" id="459-sW-Lrv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Py-FM-eVH">
+                                <rect key="frame" x="20" y="843" width="86" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="0cB-Ya-ueU"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Previous">
+                                    <fontDescription key="titleFontDescription" name="LabGrotesque-Bold" family="Lab Grotesque" pointSize="16"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="previousButton:" destination="5oT-jU-HK5" eventType="touchUpInside" id="A3M-cw-yZN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="tJf-qI-vY9"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="6Py-FM-eVH" secondAttribute="bottom" constant="19" id="1A4-Qz-PTN"/>
+                            <constraint firstItem="tJf-qI-vY9" firstAttribute="trailing" secondItem="1nx-PF-xhv" secondAttribute="trailing" constant="20" id="5Yk-8A-2fz"/>
+                            <constraint firstItem="hJb-L2-rSw" firstAttribute="top" secondItem="4ro-Ae-cFQ" secondAttribute="bottom" id="6ct-UD-cIn"/>
+                            <constraint firstItem="1nx-PF-xhv" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Py-FM-eVH" secondAttribute="trailing" constant="8" symbolic="YES" id="Ny3-is-VMg"/>
+                            <constraint firstItem="1nx-PF-xhv" firstAttribute="top" secondItem="4ro-Ae-cFQ" secondAttribute="bottom" constant="19" id="O1w-ZI-zsK"/>
+                            <constraint firstItem="hJb-L2-rSw" firstAttribute="top" secondItem="4ro-Ae-cFQ" secondAttribute="bottom" id="T4j-dn-Ztr"/>
+                            <constraint firstItem="4ro-Ae-cFQ" firstAttribute="trailing" secondItem="tJf-qI-vY9" secondAttribute="trailing" id="dER-2C-udx"/>
+                            <constraint firstItem="6Py-FM-eVH" firstAttribute="top" secondItem="4ro-Ae-cFQ" secondAttribute="bottom" constant="19" id="e8O-dC-59B"/>
+                            <constraint firstAttribute="bottom" secondItem="hJb-L2-rSw" secondAttribute="bottom" id="fdk-7A-uJZ"/>
+                            <constraint firstAttribute="bottom" secondItem="1nx-PF-xhv" secondAttribute="bottom" constant="19" id="fzf-xn-E5a"/>
+                            <constraint firstItem="4ro-Ae-cFQ" firstAttribute="leading" secondItem="tJf-qI-vY9" secondAttribute="leading" id="ojN-DU-8Bf"/>
+                            <constraint firstItem="hJb-L2-rSw" firstAttribute="trailing" secondItem="tJf-qI-vY9" secondAttribute="trailing" id="owZ-Wr-sWa"/>
+                            <constraint firstItem="hJb-L2-rSw" firstAttribute="leading" secondItem="tJf-qI-vY9" secondAttribute="leading" id="rgf-Uk-nt7"/>
+                            <constraint firstItem="6Py-FM-eVH" firstAttribute="leading" secondItem="tJf-qI-vY9" secondAttribute="leading" constant="20" id="sGI-RL-aov"/>
+                            <constraint firstItem="4ro-Ae-cFQ" firstAttribute="top" secondItem="ecB-pm-ha0" secondAttribute="top" id="uDb-Pm-7fd"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="countryStartLabel" destination="WAu-Tg-2Jy" id="aol-BR-nST"/>
+                        <outlet property="diameterValueLabel" destination="Om4-Aa-Pne" id="3f2-rF-E0d"/>
+                        <outlet property="firstAmountEngine" destination="3MZ-V0-2bn" id="M2R-zt-lch"/>
+                        <outlet property="firstAmountFuel" destination="i4C-42-8bZ" id="MHC-ns-xMs"/>
+                        <outlet property="firstCombustionTime" destination="DvP-BE-M4I" id="4k0-bO-TJ0"/>
+                        <outlet property="firstStartLabel" destination="LAf-4e-UJc" id="E96-1I-0aL"/>
+                        <outlet property="heightValueLabel" destination="2XY-Iy-7fC" id="hU1-zC-Rkb"/>
+                        <outlet property="imageView" destination="w1x-xY-4sE" id="RVe-pk-Ns5"/>
+                        <outlet property="loadValueLabel" destination="j3a-j2-sVa" id="QCi-sp-H5M"/>
+                        <outlet property="massValueLabel" destination="iAQ-eR-ktw" id="mrp-oW-iUF"/>
+                        <outlet property="pageControl" destination="hJb-L2-rSw" id="uNp-gW-bpo"/>
+                        <outlet property="previousBtnOutlet" destination="6Py-FM-eVH" id="C6Y-mO-odA"/>
+                        <outlet property="priceStartLabel" destination="cgJ-Ua-7EK" id="CmT-8M-PST"/>
+                        <outlet property="rocketNameLabel" destination="PXH-KX-pYL" id="GyO-Nx-hlM"/>
+                        <outlet property="secondAmountEngine" destination="64t-Rb-Y4P" id="fO4-7h-hSz"/>
+                        <outlet property="secondAmountFuel" destination="xZe-Fq-xin" id="zUL-Hy-T0O"/>
+                        <outlet property="secondCombustionTime" destination="5b4-Vl-LYP" id="yii-vC-9L3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QBh-Pi-tOq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1721.7391304347827" y="-51.5625"/>
+        </scene>
+        <!--Launches View Controller-->
+        <scene sceneID="qfC-fJ-iye">
+            <objects>
+                <viewController storyboardIdentifier="LaunchesViewController" id="aDO-Bp-YdH" customClass="LaunchesViewController" customModule="SpaceX" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Qhb-bX-r9W">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HBX-Iw-Z7e">
+                                <rect key="frame" x="26" y="44" width="56" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Back"/>
+                                <connections>
+                                    <action selector="dismisLaunchesButton:" destination="aDO-Bp-YdH" eventType="touchUpInside" id="wg7-G4-Gga"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="rih-YC-XGl"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Nt-dr-zva" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="2642" y="-20"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="power" catalog="system" width="128" height="124"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

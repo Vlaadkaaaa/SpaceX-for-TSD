@@ -13,6 +13,8 @@
 		5565157328B49BE3007D1FAF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5565157128B49BE3007D1FAF /* Main.storyboard */; };
 		5565157528B49BE8007D1FAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5565157428B49BE8007D1FAF /* Assets.xcassets */; };
 		5565157828B49BE8007D1FAF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5565157628B49BE8007D1FAF /* LaunchScreen.storyboard */; };
+		5565158028B49DF3007D1FAF /* LaunchesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5565157F28B49DF3007D1FAF /* LaunchesViewController.swift */; };
+		5565158428B4A0FB007D1FAF /* RocketDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5565158328B4A0FB007D1FAF /* RocketDataModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		5565157428B49BE8007D1FAF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5565157728B49BE8007D1FAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5565157928B49BE8007D1FAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5565157F28B49DF3007D1FAF /* LaunchesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchesViewController.swift; sourceTree = "<group>"; };
+		5565158328B4A0FB007D1FAF /* RocketDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketDataModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +44,7 @@
 		5565155F28B49BE3007D1FAF = {
 			isa = PBXGroup;
 			children = (
+				5565158228B4A0C3007D1FAF /* Model */,
 				5565156A28B49BE3007D1FAF /* SpaceX */,
 				5565156928B49BE3007D1FAF /* Products */,
 			);
@@ -60,11 +65,20 @@
 				5565156D28B49BE3007D1FAF /* SceneDelegate.swift */,
 				5565156F28B49BE3007D1FAF /* ViewController.swift */,
 				5565157128B49BE3007D1FAF /* Main.storyboard */,
+				5565157F28B49DF3007D1FAF /* LaunchesViewController.swift */,
 				5565157428B49BE8007D1FAF /* Assets.xcassets */,
 				5565157628B49BE8007D1FAF /* LaunchScreen.storyboard */,
 				5565157928B49BE8007D1FAF /* Info.plist */,
 			);
 			path = SpaceX;
+			sourceTree = "<group>";
+		};
+		5565158228B4A0C3007D1FAF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5565158328B4A0FB007D1FAF /* RocketDataModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +153,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5565157028B49BE3007D1FAF /* ViewController.swift in Sources */,
+				5565158428B4A0FB007D1FAF /* RocketDataModel.swift in Sources */,
+				5565158028B49DF3007D1FAF /* LaunchesViewController.swift in Sources */,
 				5565156C28B49BE3007D1FAF /* AppDelegate.swift in Sources */,
 				5565156E28B49BE3007D1FAF /* SceneDelegate.swift in Sources */,
 			);
