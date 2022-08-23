@@ -5,7 +5,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -608,7 +607,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QBh-Pi-tOq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1721.7391304347827" y="-51.5625"/>
+            <point key="canvasLocation" x="1741" y="-20"/>
         </scene>
         <!--Launches View Controller-->
         <scene sceneID="qfC-fJ-iye">
@@ -618,29 +617,130 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HBX-Iw-Z7e">
-                                <rect key="frame" x="26" y="44" width="56" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HBX-Iw-Z7e">
+                                <rect key="frame" x="10" y="44" width="111" height="43"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Back"/>
+                                <buttonConfiguration key="configuration" style="plain" image="chevron.backward" catalog="system" title=" Назад">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="24"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="dismisLaunchesButton:" destination="aDO-Bp-YdH" eventType="touchUpInside" id="wg7-G4-Gga"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name Rocket" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="69X-xk-UID">
+                                <rect key="frame" x="138" y="64" width="138.5" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tVj-8w-1mE">
+                                <rect key="frame" x="32" y="127" width="350" height="100"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ciS-ko-F84">
+                                        <rect key="frame" x="24" y="24" width="49" height="24"/>
+                                        <fontDescription key="fontDescription" name="LabGrotesque-Regular" family="Lab Grotesque" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uk5-C5-7q5">
+                                        <rect key="frame" x="24" y="52" width="49" height="24"/>
+                                        <fontDescription key="fontDescription" name="LabGrotesque-Regular" family="Lab Grotesque" pointSize="20"/>
+                                        <color key="textColor" red="0.5568627451" green="0.5568627451" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a6W-9X-uie">
+                                        <rect key="frame" x="293" y="38" width="49" height="24"/>
+                                        <fontDescription key="fontDescription" name="LabGrotesque-Regular" family="Lab Grotesque" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.12941176469999999" green="0.12941176469999999" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="a6W-9X-uie" firstAttribute="top" secondItem="tVj-8w-1mE" secondAttribute="top" constant="38" id="4d6-nS-lg7"/>
+                                    <constraint firstItem="a6W-9X-uie" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ciS-ko-F84" secondAttribute="trailing" constant="8" symbolic="YES" id="BEK-tf-tsS"/>
+                                    <constraint firstItem="a6W-9X-uie" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Uk5-C5-7q5" secondAttribute="trailing" constant="8" symbolic="YES" id="H67-Ou-3Eh"/>
+                                    <constraint firstAttribute="bottom" secondItem="a6W-9X-uie" secondAttribute="bottom" constant="38" id="MIu-ZP-ySE"/>
+                                    <constraint firstAttribute="trailing" secondItem="a6W-9X-uie" secondAttribute="trailing" constant="8" id="OjW-6f-mPF"/>
+                                    <constraint firstAttribute="height" constant="100" id="SvA-Tk-Rvm"/>
+                                    <constraint firstItem="Uk5-C5-7q5" firstAttribute="leading" secondItem="tVj-8w-1mE" secondAttribute="leading" constant="24" id="Vwx-tU-WwA"/>
+                                    <constraint firstItem="Uk5-C5-7q5" firstAttribute="top" secondItem="ciS-ko-F84" secondAttribute="bottom" constant="4" id="mTn-Qx-FqV"/>
+                                    <constraint firstItem="ciS-ko-F84" firstAttribute="leading" secondItem="tVj-8w-1mE" secondAttribute="leading" constant="24" id="shS-Hj-vYQ"/>
+                                    <constraint firstItem="ciS-ko-F84" firstAttribute="top" secondItem="tVj-8w-1mE" secondAttribute="top" constant="24" id="wLF-QI-iP6"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TGn-rP-Oe2">
+                                <rect key="frame" x="32" y="257" width="350" height="100"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JFj-pa-kdU">
+                                        <rect key="frame" x="24" y="24" width="49" height="24"/>
+                                        <fontDescription key="fontDescription" name="LabGrotesque-Regular" family="Lab Grotesque" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xm5-xC-XLM">
+                                        <rect key="frame" x="24" y="52" width="49" height="24"/>
+                                        <fontDescription key="fontDescription" name="LabGrotesque-Regular" family="Lab Grotesque" pointSize="20"/>
+                                        <color key="textColor" red="0.5568627451" green="0.5568627451" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uk9-Se-GQA">
+                                        <rect key="frame" x="293" y="38" width="49" height="24"/>
+                                        <fontDescription key="fontDescription" name="LabGrotesque-Regular" family="Lab Grotesque" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.12941176469999999" green="0.12941176469999999" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="xm5-xC-XLM" firstAttribute="leading" secondItem="TGn-rP-Oe2" secondAttribute="leading" constant="24" id="69U-So-ddK"/>
+                                    <constraint firstItem="uk9-Se-GQA" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="JFj-pa-kdU" secondAttribute="trailing" constant="8" symbolic="YES" id="6gs-6L-fPe"/>
+                                    <constraint firstAttribute="bottom" secondItem="uk9-Se-GQA" secondAttribute="bottom" constant="38" id="9Vr-Xc-g9N"/>
+                                    <constraint firstItem="uk9-Se-GQA" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="xm5-xC-XLM" secondAttribute="trailing" constant="8" symbolic="YES" id="Ba4-XU-sLT"/>
+                                    <constraint firstAttribute="trailing" secondItem="uk9-Se-GQA" secondAttribute="trailing" constant="8" id="Ccy-wz-YE8"/>
+                                    <constraint firstItem="uk9-Se-GQA" firstAttribute="top" secondItem="TGn-rP-Oe2" secondAttribute="top" constant="38" id="Lhm-nP-Zoz"/>
+                                    <constraint firstItem="JFj-pa-kdU" firstAttribute="top" secondItem="TGn-rP-Oe2" secondAttribute="top" constant="24" id="S6M-Dh-Ryq"/>
+                                    <constraint firstItem="JFj-pa-kdU" firstAttribute="leading" secondItem="TGn-rP-Oe2" secondAttribute="leading" constant="24" id="phZ-c6-7PD"/>
+                                    <constraint firstAttribute="height" constant="100" id="uCi-vS-IUq"/>
+                                    <constraint firstItem="xm5-xC-XLM" firstAttribute="top" secondItem="JFj-pa-kdU" secondAttribute="bottom" constant="4" id="xFi-cI-YjV"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="rih-YC-XGl"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="69X-xk-UID" firstAttribute="baseline" secondItem="HBX-Iw-Z7e" secondAttribute="baseline" id="4nh-z5-Awo"/>
+                            <constraint firstItem="69X-xk-UID" firstAttribute="centerX" secondItem="tVj-8w-1mE" secondAttribute="centerX" id="9Vy-gb-TR5"/>
+                            <constraint firstItem="HBX-Iw-Z7e" firstAttribute="top" secondItem="rih-YC-XGl" secondAttribute="top" id="FLN-AW-77T"/>
+                            <constraint firstItem="tVj-8w-1mE" firstAttribute="leading" secondItem="rih-YC-XGl" secondAttribute="leading" constant="32" id="KLy-dl-fIJ"/>
+                            <constraint firstItem="HBX-Iw-Z7e" firstAttribute="leading" secondItem="rih-YC-XGl" secondAttribute="leading" constant="10" id="KUy-xc-1ek"/>
+                            <constraint firstItem="tVj-8w-1mE" firstAttribute="top" secondItem="HBX-Iw-Z7e" secondAttribute="bottom" constant="40" id="QVa-jz-1Sy"/>
+                            <constraint firstItem="rih-YC-XGl" firstAttribute="trailing" secondItem="TGn-rP-Oe2" secondAttribute="trailing" constant="32" id="Y0B-2N-1Wb"/>
+                            <constraint firstItem="69X-xk-UID" firstAttribute="leading" secondItem="HBX-Iw-Z7e" secondAttribute="trailing" constant="17" id="eKy-tk-EIV"/>
+                            <constraint firstItem="TGn-rP-Oe2" firstAttribute="leading" secondItem="rih-YC-XGl" secondAttribute="leading" constant="32" id="nJ5-yn-qga"/>
+                            <constraint firstItem="rih-YC-XGl" firstAttribute="trailing" secondItem="tVj-8w-1mE" secondAttribute="trailing" constant="32" id="pzC-iD-WyH"/>
+                            <constraint firstItem="TGn-rP-Oe2" firstAttribute="top" secondItem="tVj-8w-1mE" secondAttribute="bottom" constant="30" id="teV-9j-kr0"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="dateRocketOneLabel" destination="Uk5-C5-7q5" id="5nz-37-kQM"/>
+                        <outlet property="dateRocketTwoLabel" destination="xm5-xC-XLM" id="jUH-Us-TZI"/>
+                        <outlet property="luckyStartOneLable" destination="a6W-9X-uie" id="yFy-hz-U8d"/>
+                        <outlet property="luckyStartTwoLabel" destination="uk9-Se-GQA" id="bxI-PO-5or"/>
+                        <outlet property="nameRocketLabel" destination="69X-xk-UID" id="sHM-Fo-M3V"/>
+                        <outlet property="nameRocketOneLabel" destination="ciS-ko-F84" id="Bqb-00-3Mu"/>
+                        <outlet property="nameRocketTwoLabel" destination="JFj-pa-kdU" id="eEN-Xx-ieW"/>
+                        <outlet property="twoViewOutlet" destination="TGn-rP-Oe2" id="hN1-V0-2eL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Nt-dr-zva" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2642" y="-20"/>
+            <point key="canvasLocation" x="2640.579710144928" y="-20.089285714285712"/>
         </scene>
     </scenes>
     <resources>
+        <image name="chevron.backward" catalog="system" width="96" height="128"/>
         <image name="power" catalog="system" width="128" height="124"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>

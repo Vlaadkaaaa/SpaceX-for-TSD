@@ -15,6 +15,7 @@
 		5565157828B49BE8007D1FAF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5565157628B49BE8007D1FAF /* LaunchScreen.storyboard */; };
 		5565158028B49DF3007D1FAF /* LaunchesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5565157F28B49DF3007D1FAF /* LaunchesViewController.swift */; };
 		5565158428B4A0FB007D1FAF /* RocketDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5565158328B4A0FB007D1FAF /* RocketDataModel.swift */; };
+		5565158628B4B001007D1FAF /* RocketStartModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5565158528B4B001007D1FAF /* RocketStartModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		5565157928B49BE8007D1FAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5565157F28B49DF3007D1FAF /* LaunchesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchesViewController.swift; sourceTree = "<group>"; };
 		5565158328B4A0FB007D1FAF /* RocketDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketDataModel.swift; sourceTree = "<group>"; };
+		5565158528B4B001007D1FAF /* RocketStartModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketStartModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				5565158328B4A0FB007D1FAF /* RocketDataModel.swift */,
+				5565158528B4B001007D1FAF /* RocketStartModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -156,6 +159,7 @@
 				5565158428B4A0FB007D1FAF /* RocketDataModel.swift in Sources */,
 				5565158028B49DF3007D1FAF /* LaunchesViewController.swift in Sources */,
 				5565156C28B49BE3007D1FAF /* AppDelegate.swift in Sources */,
+				5565158628B4B001007D1FAF /* RocketStartModel.swift in Sources */,
 				5565156E28B49BE3007D1FAF /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

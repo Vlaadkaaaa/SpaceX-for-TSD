@@ -99,7 +99,8 @@ class ViewController: UIViewController {
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let destanation = segue.destination as! LaunchesViewController
-        destanation.str = arrayRocket[currentPozition].nameRocket
+        destanation.nameRocket = arrayRocket[currentPozition].nameRocket
+        destanation.currentRocket = currentPozition
     }
     
 }
